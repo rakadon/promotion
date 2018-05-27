@@ -28,7 +28,7 @@ public class PromotionBannerImpl implements PromotionBanner {
 			}
 			return false;
 		}).collect(Collectors.toList());
-		System.out.println("[INFO] Number of available banners for IpAdress :" + ipAddress + ", ZonedDateTime :"
+		System.out.println("[INFO] Number of available banners for IpAdress :" + ipAddress + " at ZonedDateTime :"
 				+ zonedDateTime + " = " + result.size());
 		return result;
 	}

@@ -71,6 +71,9 @@ public class JsonDataValidator {
 		// check valid ip address
 		JSONArray permittedIpArray = (JSONArray) jsonObject.get("permittedIP");
 		if (permittedIpArray == null || permittedIpArray.isEmpty()) {
+			System.out.println("[ERROR] permittedIp is empty or invalid for bannerId : " + bannerId);
+			return false;
+		}else{
 			for (Object ipObj : permittedIpArray) {
 				try {
 					InetAddress.getByName((String) ipObj);
